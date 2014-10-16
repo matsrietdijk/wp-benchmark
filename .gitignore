@@ -1,2 +1,4 @@
-config/*
-!config/*-example
+config/vhost/apache/*
+!config/vhost/apache/*-example
+config/vhost/nginx/*
+!config/vhost/nginx/*-example
