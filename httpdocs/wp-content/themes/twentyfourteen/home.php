@@ -4,16 +4,18 @@ global $post;
 $projects = get_posts(array(
   'posts_per_page' => 5,
   'post_type' => 'project',
+  'suppress_filters' => 0,
 ));
 
 $employees = get_posts(array(
   'posts_per_page' => -1,
   'post_type' => 'employee',
+  'suppress_filters' => 0,
 ));
 
 get_header(); ?>
 
-<div id="main-content">
+<div id="main-content" class="site-content">
 
   <?php if( !empty( $projects ) ) : ?>
     <?php foreach( $projects as $post ) : setup_postdata( $post ); ?>
