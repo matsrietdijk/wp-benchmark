@@ -22,8 +22,8 @@ get_header(); ?>
       <div class="project">
         <h2 class="title"><?php the_title(); ?></h2>
         <a href="<?php echo get_permalink(); ?>">Meer lezen</a>
-        <a href="<?php echo get_post_meta( get_the_ID(), 'url', true ); ?>">Project bezoeken</a>
-        <p class="klant"><?php echo get_post_meta( get_the_ID(), 'customer', true ); ?></p>
+        <a href="<?php the_field('url'); ?>">Project bezoeken</a>
+        <p class="klant"><?php the_field('customer'); ?></p>
       </div>
     <?php endforeach; ?>
     <?php wp_reset_postdata(); ?>
@@ -33,8 +33,8 @@ get_header(); ?>
     <?php foreach( $employees as $post ) : setup_postdata( $post ); ?>
       <div class="employee">
         <h2>
-          <?php echo get_post_meta( get_the_ID(), 'firstname', true ); ?>
-          <?php echo get_post_meta( get_the_ID(), 'lastname', true ); ?>
+          <?php the_field('firstname'); ?>
+          <?php the_field('lastname'); ?>
         </h2>
         <a href="<?php echo get_permalink(); ?>">Meer lezen</a>
       </div>
