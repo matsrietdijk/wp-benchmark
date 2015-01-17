@@ -9,8 +9,8 @@ echo " \
   wp_benchmark@localhost identified by 'wp_benchmark'; " \
   |  mysql -u root -p
 ```
-## Generate dummy content
 
+## Generate dummy content
 
 ```fish
 for l in 'en' 'nl'; \
